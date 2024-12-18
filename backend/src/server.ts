@@ -25,7 +25,13 @@ import {
 
 const app = express();
 app.use(json());
-app.use(cors());
+app.use(
+  cors({
+    origin: 'http://localhost:3000', // Frontend URL
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true,
+  })
+);
 app.use(morgan('dev'));
 
 const PORT: number = parseInt(process.env.PORT || config.port);
