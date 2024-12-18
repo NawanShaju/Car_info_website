@@ -7,13 +7,13 @@
  */
 import express, { json, Response } from 'express';
 import morgan from 'morgan';
-import config from './src/config.json';
+import config from './config.json';
 import cors from 'cors';
 import process from 'process';
-import { echo, clear, error } from './src/debug';
-import { handleError } from './src/errors';
+import { echo, clear, error } from './debug';
+import { handleError } from './errors';
 import fs from 'fs';
-import { getData } from './src/datastore';
+import { getData } from './datastore';
 import {
   findCar,
   createNewCar,
@@ -21,7 +21,7 @@ import {
   deleteCarData,
   filteredResult,
   showAll,
-} from './src/functions/index'
+} from './functions/index'
 
 const app = express();
 app.use(json());
