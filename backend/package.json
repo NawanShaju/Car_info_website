@@ -4,9 +4,9 @@
         "tsc": "tsc --project tsconfig.json",
         "lint": "eslint 'src/**/*.{ts,js}'",
         "lint-fix": "eslint --fix 'src/**/*.{ts,js}'",
-        "start": "ts-node -T src/index.ts",
-        "start-dev": "ts-node-dev -T src/index.ts",
-        "start-coverage": "nyc --reporter=text --reporter=lcov ts-node -T src/index.ts"
+        "start": "ts-node -T index.ts",
+        "start-dev": "ts-node-dev -T index.ts",
+        "start-coverage": "nyc --reporter=text --reporter=lcov ts-node -T index.ts"
     },
     "dependencies": {
         "cors": "^2.8.5",
