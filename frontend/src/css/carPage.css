@@ -1,0 +1,322 @@
+.carPage {
+    position: absolute; 
+    background-color: #000;
+    background-size: cover;
+    overflow: auto;
+    width: 100%;
+    height: 100%; 
+    scroll-behavior: smooth;
+}
+
+.search-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.search-logo-btn {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    transition: all 0.3s ease;
+}
+
+.search-logo-btn.active {
+    border-radius: 10px;
+    background-color: #e3e1a7;
+    transition: all 0.3s ease;
+}
+
+.logo-btn {
+    width: 40px;
+    padding: 7px;
+    border: 2px solid #e3e1a7;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.logo-btn:hover {
+    transform: scale(1.05);
+    transition: all 0.5s ease;
+}
+
+.logo-btn.active {
+    width: 42px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.carAdd-container {
+    position: fixed;
+    top: 7.8%;
+    right: -100%; 
+    width: 40%;
+    height: 95%;
+    background-color: #445f7af6;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    color: #e3e1a7;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+    transition: right 0.3s ease-in-out; 
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1000;
+    transition: all 0.5s ease;
+}
+
+.carAdd-container.visible {
+    right: 0px; 
+    transition: all 0.5s ease;
+    scroll-behavior: unset;
+}
+
+.plus-logo-btn {
+    background-color: #e3e1a7;
+    border-radius: 10px;
+    border-style: none;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    transition: all 0.3s ease;
+    font-size: medium;
+}
+
+.plus-btn {
+    width: 40px;
+    padding: 7px;
+    border: 2px solid #e3e1a7;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.plus-btn.active {
+    display: none;
+    width: 42px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.cross-btn {
+    position: relative;
+    width: 40px;
+    padding: 7px;
+    font-size: medium;
+    border: 2px solid #e3e1a7;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.carAdd-container h2 {
+    margin-top: 10px;
+    position: relative;
+    left: 50px;
+}
+
+.search-form {
+    display: flex;
+    gap: 10px;
+}
+
+@media screen and (max-width: 655px) {
+    .carPage {
+        height: auto;
+    }
+}
+
+.search-box-cars {
+    display: none;
+    width: 200px;
+    height: 35px;
+    padding: 8px;
+    border: 1px solid #e3e1a7;
+    border-style: none;
+    border-radius: 6px;
+}
+
+.search-box-cars.active {
+    display: flex;
+    animation-name: appear-box;
+    animation-duration: 1s; 
+    animation-timing-function: ease; 
+    animation-fill-mode: forwards; 
+}
+
+.search-box-cars.active::placeholder {
+    display: flex;
+    animation-name: appear-placeholder;
+    animation-duration: 1s; 
+    animation-timing-function: ease; 
+    animation-fill-mode: forwards; 
+}
+
+@keyframes appear-box {
+    from { 
+        background-color: #000;
+        color: #000;
+    }
+    to { 
+        border: 1px solid #e3e1a7;
+        background-color: #000;
+        color: #e3e1a7;
+    }
+}
+
+@keyframes appear-placeholder {
+    from { 
+        background-color: #000;
+        color: #000;
+    }
+    to { 
+        background-color: #000;
+        color: #e3e1a7;
+    }
+}
+
+.search-btn-cars {
+    display: none;
+    padding: 10px 15px;
+    width: 50px;
+    height: 35px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.search-btn-cars:hover {
+    transform: scale(1.05);
+    transition: all 0.5s ease;
+}
+
+.search-btn-cars.active {
+    display: flex;
+    animation-name: appear-btn;
+    animation-duration: 1s; 
+    animation-timing-function: ease; 
+    animation-fill-mode: forwards; 
+}
+
+@keyframes appear-btn {
+    from { 
+        background-color: #000;
+    }
+    to {
+        border: 1px solid #e3e1a7; 
+        color: #e3e1a7;
+        background-color: #445f7a;
+    }
+}
+
+.filter-box {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    display: none;
+    width: 88px;
+    height: 35px;
+    padding: 10px;
+    border-radius: 6px;
+    color: #e3e1a7;
+    border: 1px solid #e3e1a7;
+    position: relative;
+    background-color: #445f7a;
+    padding-right: 30px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.filter-box:hover {
+    transform: scale(1.05);
+    transition: all 0.5s ease;
+}
+
+.filter-box.active {
+    display: flex;
+    animation-name: appear-filter;
+    animation-duration: 1s; 
+    animation-timing-function: ease; 
+    animation-fill-mode: forwards; 
+}
+
+@keyframes appear-filter {
+    from { 
+        color: #000;
+        border: 1px solid #000;
+        background-color: #000;
+    }
+    to {
+        border: 1px solid #e3e1a7; 
+        color: #e3e1a7;
+        background-color: #445f7a;
+    }
+}
+
+.search-btn-cars:active {
+    transform: scale(1.1);
+}
+
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.error-container {
+    background-color: #ffffff;
+    border: 6px solid #e3e1a7;
+    height: 550px;
+    border-radius: 20px;
+    display: flex;
+    margin-top: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-number {
+    width: 48px;
+    height: auto;
+    position: relative;
+    top: -98px;
+    left: 240px;
+}
+
+.error-img {
+    width: 100px;
+    height: auto;
+    position: relative;
+    top: -100px;
+    left: 250px;
+}
+
+.error {
+    color: #000000;
+    margin: 10px;
+    position: relative;
+    top: -40px;
+    left: -50px;
+    text-wrap: nowrap;
+}
+
+.error__links {
+    position: relative;
+    left: -260px;
+    top: 20px;
+    background-color: #17054f;
+    border-radius: 4px;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    text-wrap: nowrap;
+}

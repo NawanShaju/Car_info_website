@@ -1,0 +1,120 @@
+.search-btn {
+    background-color: transparent;
+    border: 1px solid #e3e1a7;
+    display: inline;
+    margin-left: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 3rem;
+    /* font-size: large; */
+    outline: node;
+    border-radius: 10px;
+    color: #fff;
+    transition: all 1s ease;
+    cursor: pointer;
+}
+
+.search-btn:active {
+    transform: scale(1.05);
+    transition: all 0.1s ease;
+}
+
+.search-box {
+    display: inline;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 12px;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    background-color: transparent;
+    border: 1px solid #e3e1a7;
+    border-radius: 10px;
+    padding: 15px 20px;
+    height: 3rem;
+    width: 40rem;
+    color: #fff;
+    transition: all 1s ease;
+}
+.search-box:focus {
+    transform: scale(1.02);
+    margin-right: 5px;
+    transition: all 1s ease;
+    outline: none;
+    box-shadow: none;
+}
+
+.main-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10% 0%;
+    transition: all 0.3s ease;
+}
+
+.background-vid {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .search-box {
+        width: 25rem;
+        position: relative;
+        top: -150px;
+        transition: all 1s ease;
+    }
+
+    .search-btn {
+        position: relative;
+        top: -150px;
+        transition: all 1s ease;
+    }
+
+    .main-page {
+        padding: 20% 0%;
+    }
+
+    .background-video {
+        display: none;
+    }
+
+    .main-page {
+        background-image: url('backgroundImg.png');
+        background-repeat: no-repeat;
+        background-size: cover; 
+        background-position: center; 
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; 
+        height: 100vh; 
+        z-index: -1;
+    }
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    pointer-events: none; 
+}
+
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; 
+    z-index: -1;
+    pointer-events: none;
+}
+

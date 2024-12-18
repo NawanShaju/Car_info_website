@@ -1,0 +1,172 @@
+.car-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #000000;
+    transition: transform 0.2s;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    border-color: #e3e1a7;
+}
+  
+.car-card:hover {
+    transform: scale(1.02);
+    transition: all 0.2s ease;
+}
+
+.car-poster {
+    position: relative;
+    aspect-ratio: 4/2;
+    width: 100%;
+}
+
+.car-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.car-poster textarea {
+    display: flex;
+    background: transparent;
+    color: #e3e1a7;
+    align-content: center;
+    text-align: justify;
+    padding: 10px;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.delete-btn {
+    background-image: url('trash.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    width: 1rem;
+    height: 1.5rem;
+    border-radius: 6px;
+    border-style: none;
+    align-self: flex-end;
+    position: relative;
+    top: 15px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-image: url('trashOpen.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    background-color: #320101;
+    transition: all 0.3s ease;
+}
+
+.delete-btn:active {
+    transform: scale(1.2);
+    transition: all 0.3s ease;
+}
+
+.edit {
+    width: 1rem;
+    height: 1.5rem;
+    border-radius: 6px;
+    border-style: none;
+    align-self: flex-end;
+    margin: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative; 
+    bottom: 50px; 
+    right: 15px; 
+    border-style: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.edit:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.edit:active {
+    transform: scale(0.9);
+    transition: all 0.3s ease;
+}
+
+.edit img{
+    width: 2.5rem;
+}
+
+.car-card:hover .car-overlay {
+    opacity: 1;
+}
+
+.car-info {
+    padding: 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.car-info h3 {
+    color: aqua;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.car-info p {
+    color: #999;
+    font-size: 0.8rem;
+}
+
+.car-info input {
+    font-size: 1rem;
+    width: 10rem;
+    background-color: transparent;
+    color: #e3e1a7;
+}
+
+@media (max-width: 768px) {
+    .car-card {
+        font-size: 0.9rem;
+    }
+
+    .car-info {
+        padding: 0.75rem;
+    }
+}
+
+.more-info {
+    position: absolute; 
+    bottom: 10px; 
+    right: 10px; 
+    background-color: #000000;
+    background-image: linear-gradient(#320236 0%, #6f0000 60%);
+    border-radius: 4px;
+    border-style: none;
+    color: #ffffff;
+    background-size: cover;
+    cursor: pointer;
+    padding: 5px 10px; 
+    font-size: 12px; 
+}
+
+.more-info:active {
+    transform: scale(1.02);
+    transition: all 0.1s ease;
+}
+
+.more-info:hover {
+    color: #445f7a;
+    transition: all 0.5s ease;
+}
