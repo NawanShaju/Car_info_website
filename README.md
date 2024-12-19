@@ -6,6 +6,6 @@ The backend utilises a data store to manage data, saving it to an external file.
 
 
 ### video demo for the application
-this is a video demo of this website showing all its features
+This is a video demo of the website showcasing all its features
 
 https://github.com/user-attachments/assets/4f815f27-18cf-4e35-b805-4550c4496e5e
